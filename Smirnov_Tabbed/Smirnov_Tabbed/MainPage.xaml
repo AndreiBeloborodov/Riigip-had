@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:local="clr-namespace:Smirnov_Tabbed;assembly=Smirnov_Tabbed"
+             x:Class="Smirnov_Tabbed.MainPage">
+
+    <TabbedPage.Children>
+        <local:Jaanuar/>
+        <local:Veebruar/>
+        <local:Märts/>
+        <local:Aprill/>
+        <local:Mai/>
+        <local:Juuni/>
+        <local:Juuli/>
+        <local:August/>
+        <l
+    </TabbedPage.Children>
+
+</TabbedPage>
