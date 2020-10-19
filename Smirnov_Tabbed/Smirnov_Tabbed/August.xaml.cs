@@ -15,6 +15,27 @@ namespace Smirnov_Tabbed
         public August()
         {
             InitializeComponent();
+            Grid grd = new Grid
+            {
+                RowDefinitions =
+                {
+                    new RowDefinition { Height = new GridLength(1, GridUnitType.Star)},
+                    new RowDefinition { Height = new GridLength(3, GridUnitType.Star)},
+                    new RowDefinition { Height = new GridLength(2, GridUnitType.Star)}
+                },
+                ColumnDefinitions =
+                {
+                    new ColumnDefinition {Width = new GridLength(1, GridUnitType.Star)}
+
+                }
+            };
+            Label nimetus = new Label { Text = "August", FontSize = 30 };
+            Image img = new Image { Source = "August.jpg" };
+            Label kirjeldus = new Label { Text = "Eesti Vabariigi Ülemnõukogu lähtus oma otsuses Eesti Vabariigi järjekestvusest rahvusvahelise õiguse subjektina." };
+            grd.Children.Add(nimetus, 0, 0);
+            grd.Children.Add(img, 0, 1);
+            grd.Children.Add(kirjeldus, 0, 2);
+            Content = grd;
         }
     }
 }

@@ -13,26 +13,29 @@ namespace Smirnov_Tabbed
     public partial class Jaanuar : ContentPage
     {
         public Jaanuar()
-        {
+        { 
             InitializeComponent();
             Grid grd = new Grid
             {
                 RowDefinitions =
                 {
-                    new RowDefinition { Height = new GridLenght(1, GridUnitType.Star) },
-                    new RowDefinition { Height = new GridLenght(3, GridunitType.Star) },
-                    new RowDefinition { Height = new GridLenght(2, GridunitType.Star) }
+                    new RowDefinition { Height = new GridLength(1, GridUnitType.Star)},
+                    new RowDefinition { Height = new GridLength(3, GridUnitType.Star)},
+                    new RowDefinition { Height = new GridLength(2, GridUnitType.Star)}
                 },
                 ColumnDefinitions =
                 {
-                    new RowDefinition { Width = new GridLenght(1, GridunitType.Star) }
+                    new ColumnDefinition {Width = new GridLength(1, GridUnitType.Star)}
+
                 }
             };
             Label nimetus = new Label { Text = "Jaanuari pilt", FontSize = 30 };
-            Image img = new Image { Source = "Январь.jpg" };
+            Image img = new Image { Source = "Jaanuar.jpg" };
             Label kirjeldus = new Label { Text = "Uusaasta on püha, mil tähistatakse uue kalendriaasta algust. Lääneriikides, kus kasutatakse Gregoriuse kalendrit, on uusaasta 1. jaanuaril." };
-            grd.children.add(nimetus, 0, 0);
-            grd.children.add(img, 0, 1);
-            grd.children.add(kirjeldus, 0, 2);
-            content = grd;
-            {
+            grd.Children.Add(nimetus, 0, 0);
+            grd.Children.Add(img, 0, 1);
+            grd.Children.Add(kirjeldus, 0, 2);
+            Content = grd;
+        }
+    }
+}

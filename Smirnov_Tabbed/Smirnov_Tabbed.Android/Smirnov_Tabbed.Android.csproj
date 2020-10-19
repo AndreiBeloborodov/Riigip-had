@@ -85,7 +85,9 @@
     <AndroidResource Include="Resources\mipmap-xxxhdpi\icon.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\launcher_foreground.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Veebuar.jpg" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Smirnov_Tabbed\Smirnov_Tabbed.csproj">
       <Project>{0FE00491-04B0-44FD-A9D8-A0B8C3025E2E}</Project>
@@ -93,40 +95,37 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\Январь.jpg" />
+    <AndroidResource Include="Resources\drawable\Aprill.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\Февраль.jpg" />
+    <AndroidResource Include="Resources\drawable\August.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\Ноябрь.jpg" />
+    <AndroidResource Include="Resources\drawable\Jaanuar.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\Октябрь.jpg" />
+    <AndroidResource Include="Resources\drawable\Juuli.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\Сентябрь.jpg" />
+    <AndroidResource Include="Resources\drawable\Juuni.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\Март.jpg" />
+    <AndroidResource Include="Resources\drawable\Mai.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\Август.jpg" />
+    <AndroidResource Include="Resources\drawable\November.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\Апрель.jpg" />
+    <AndroidResource Include="Resources\drawable\Oktober.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\Декабрь.jpg" />
+    <AndroidResource Include="Resources\drawable\September.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\Июль.jpg" />
+    <AndroidResource Include="Resources\drawable\Mart.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\Июнь.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\Май.jpg" />
+    <AndroidResource Include="Resources\drawable\Detsember.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>
