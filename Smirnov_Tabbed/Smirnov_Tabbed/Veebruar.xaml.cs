@@ -12,6 +12,8 @@ namespace Smirnov_Tabbed
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Veebruar : ContentPage
     {
+        //BoxView box;
+        Label picture2;
         public Veebruar()
         {
             InitializeComponent();
@@ -36,6 +38,13 @@ namespace Smirnov_Tabbed
             grd.Children.Add(img, 0, 1);
             grd.Children.Add(kirjeldus, 0, 2);
             Content = grd;
+            var tap1 = new TapGestureRecognizer();
+            tap1.Tapped += async (s, e) =>
+            {
+                picture2 = (Label)s;
+                await DisplayAlert("Доп. инфо", "Eesti Vabariigi aastapäev on 24. veebruaril, millega tähistatakse Eesti Vabariigi väljakuulutamist 1918. aasta 24. veebruaril.", "закрыть");
+            };
+            picture2.GestureRecognizers.Add(tap1);
         }
     }
 }

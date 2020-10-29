@@ -12,6 +12,8 @@ namespace Smirnov_Tabbed
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Märts : ContentPage
     {
+        //BoxView box;
+        Label picture3;
         public Märts()
         {
             InitializeComponent();
@@ -36,6 +38,13 @@ namespace Smirnov_Tabbed
             grd.Children.Add(img, 0, 1);
             grd.Children.Add(kirjeldus, 0, 2);
             Content = grd;
+            var tap1 = new TapGestureRecognizer();
+            tap1.Tapped += async (s, e) =>
+            {
+                picture3 = (Label)s;
+                await DisplayAlert("Доп. инфо", "emakeelepäev", "закрыть");
+            };
+            picture3.GestureRecognizers.Add(tap1);
         }
     }
 }

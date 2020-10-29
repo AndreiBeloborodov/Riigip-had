@@ -11,7 +11,8 @@ namespace Smirnov_Tabbed
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Desember : ContentPage
-    {
+    {//BoxView box;
+        Label picture12;
         public Desember()
         {
             InitializeComponent();
@@ -36,6 +37,13 @@ namespace Smirnov_Tabbed
             grd.Children.Add(img, 0, 1);
             grd.Children.Add(kirjeldus, 0, 2);
             Content = grd;
+            var tap1 = new TapGestureRecognizer();
+            tap1.Tapped += async (s, e) =>
+            {
+                picture12= (Label)s;
+                await DisplayAlert("Доп. инфо", "Pärast Eesti iseseisvuse taastamist on esimene ja teine jõulupüha (25. ja 26. detsember) riigipühad ja puhkepäevad, alates 2005. aastast ka jõululaupäev. Jõulukombestikku mõjutab järjest rohkem rahvusvaheline traditsioon.", "закрыть");
+            };
+            picture12.GestureRecognizers.Add(tap1);
         }
     }
 }

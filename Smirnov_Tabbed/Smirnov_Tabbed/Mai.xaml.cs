@@ -12,6 +12,8 @@ namespace Smirnov_Tabbed
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Mai : ContentPage
     {
+        //BoxView box;
+        Label picture5;
         public Mai()
         {
             InitializeComponent();
@@ -36,6 +38,13 @@ namespace Smirnov_Tabbed
             grd.Children.Add(img, 0, 1);
             grd.Children.Add(kirjeldus, 0, 2);
             Content = grd;
+            var tap1 = new TapGestureRecognizer();
+            tap1.Tapped += async (s, e) =>
+            {
+                picture5 = (Label)s;
+                await DisplayAlert("Доп. инфо", "Kevadpüha on Eesti riigipüha, mida peetakse 1. mail. Pühaga tähistatakse kevade saabumist.", "закрыть");
+            };
+            picture5.GestureRecognizers.Add(tap1);
         }
     }
 }

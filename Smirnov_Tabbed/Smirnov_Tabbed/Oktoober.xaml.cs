@@ -12,6 +12,8 @@ namespace Smirnov_Tabbed
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Oktoober : ContentPage
     {
+        //BoxView box;
+        Label picture10;
         public Oktoober()
         {
             InitializeComponent();
@@ -36,6 +38,13 @@ namespace Smirnov_Tabbed
             grd.Children.Add(img, 0, 1);
             grd.Children.Add(kirjeldus, 0, 2);
             Content = grd;
+            var tap1 = new TapGestureRecognizer();
+            tap1.Tapped += async (s, e) =>
+            {
+                picture10 = (Label)s;
+                await DisplayAlert("Доп. инфо", "hõimupäev", "закрыть");
+            };
+            picture10.GestureRecognizers.Add(tap1);
         }
     }
 }
