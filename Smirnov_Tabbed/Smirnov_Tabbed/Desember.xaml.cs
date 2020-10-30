@@ -40,10 +40,15 @@ namespace Smirnov_Tabbed
             var tap1 = new TapGestureRecognizer();
             tap1.Tapped += async (s, e) =>
             {
-                picture12= (Label)s;
+                img = (Image)s;
                 await DisplayAlert("Доп. инфо", "Pärast Eesti iseseisvuse taastamist on esimene ja teine jõulupüha (25. ja 26. detsember) riigipühad ja puhkepäevad, alates 2005. aastast ka jõululaupäev. Jõulukombestikku mõjutab järjest rohkem rahvusvaheline traditsioon.", "закрыть");
+                img.Opacity = 0;
             };
-            picture12.GestureRecognizers.Add(tap1);
+            img.GestureRecognizers.Add(tap1);
+            grd.Children.Add(nimetus, 0, 0);
+            grd.Children.Add(img, 0, 1);
+            grd.Children.Add(kirjeldus, 0, 2);
+            Content = grd;
         }
     }
 }

@@ -41,10 +41,15 @@ namespace Smirnov_Tabbed
             var tap1 = new TapGestureRecognizer();
             tap1.Tapped += async (s, e) =>
             {
-                picture6 = (Label)s;
+                img = (Image)s;
                 await DisplayAlert("Доп. инфо", "Jaanipäev on Eestis 24. juunil tähistatav püha. 24. juunile eelnevat 23. juuni päeva nimetatakse jaanilaupäevaks ja nendevahelist ööd jaaniööks, seda tähistatakse Eestis, Lätis ja põhjamaades jaanituledega.", "закрыть");
+                img.Opacity = 0;
             };
-            picture6.GestureRecognizers.Add(tap1);
+            img.GestureRecognizers.Add(tap1);
+            grd.Children.Add(nimetus, 0, 0);
+            grd.Children.Add(img, 0, 1);
+            grd.Children.Add(kirjeldus, 0, 2);
+            Content = grd;
         }
     }
 }

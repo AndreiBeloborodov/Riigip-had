@@ -41,10 +41,15 @@ namespace Smirnov_Tabbed
             var tap1 = new TapGestureRecognizer();
             tap1.Tapped += async (s, e) =>
             {
-                picture5 = (Label)s;
+                img = (Image)s;
                 await DisplayAlert("Доп. инфо", "Kevadpüha on Eesti riigipüha, mida peetakse 1. mail. Pühaga tähistatakse kevade saabumist.", "закрыть");
+                img.Opacity = 0;
             };
-            picture5.GestureRecognizers.Add(tap1);
+            img.GestureRecognizers.Add(tap1);
+            grd.Children.Add(nimetus, 0, 0);
+            grd.Children.Add(img, 0, 1);
+            grd.Children.Add(kirjeldus, 0, 2);
+            Content = grd;
         }
     }
 }
